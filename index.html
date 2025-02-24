@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class ="logo">
+                <a href="index.html">Rong Yi</a>
+            </div>
+
+            <div class="main-menu">
+                <ul class="nav-bar">
+                    <li><a href="#intro">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <!-- <li><a href="#">Work</a></li> -->
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>  
+
+            <div class="mobile-menu">
+                <span class ="bar"></span>
+                <span class ="bar"></span>
+                <span class ="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Intro -->
+    <div class="intro" id="intro">
+        <div class="image-container">
+            <img src="assets/profile_pic.png" alt="Profile Picture" class="profile-pic">
+        </div>
+        <div class="intro-statement">
+            <h1><em>Rong Yi</em></h1>
+            <h2>Computer Science student at the National University of Singapore, passionate about SWE, AI, and data science!</h2>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="education" id="education">
+        <div class="education-header">
+            <h1>Education</h1>
+        </div>
+
+        <div class="timeline">
+            <div class="education-container left-container">
+                <img src="assets/nus_logo.png" class="nus-logo">
+                <div class="education-card">
+                    <h2>Bachelor of Computing in Computer Science</h2>
+                    <h3>Minor in Data Science</h3>
+                    <small>2023 - 2027</small>
+                    <ul>
+                        <li>
+                            Relevant Coursework: Software Engineering, AI and ML, Data Structures and Algorithms, PostgreSQL and Database Management
+                        </li>
+    
+                        <li>
+                            Projects: Orbital and EZStates. See more <a href="#projects">here</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="education-container  right-container">
+                <img src="assets/tmjc_logo.png">
+                <div class="education-card">
+                    <h2>Tampines Meridian Junior College</h2>
+                    <small>2019 - 2020</small>
+                    <ul>
+                        <li>
+                            Studied Physics, Chemistry, Mathematics, and Economics 
+                        </li>
+    
+                        <li>
+                            Rank Points: 87.5/90
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>    
+
+    </div>
+
+    <div class="projects" id="projects">
+        <div class="projects-header">
+            <h1>Projects</h1>
+            <p>Find out more about my projects! Click on the application logo for its GitHub repository</p>
+        </div>
+
+        <div class="project-container">
+
+            <div class="project-card left-card">
+                <div class="card">
+                    <!-- Portfolio Site -->
+                    <div class="cardfront">
+                        <div class="card-img">
+                            <img src="assets/ezstates.png">
+                        </div>
+                    </div>
+
+                    <div class="cardback">
+                        <div class="app-logo">
+                            <!-- Update -->
+                            <a href="#" target="_blank"><img src="assets/github_logo.png"></a>
+                        </div>
+                        <h1>Portfolio Website</h1>
+                        <p>A personal portfolio website designed to creatively showcase and experiment with my projects</p>
+                        <div class="techstack">
+                            <ul>
+                                <li>
+                                    <div class="tech-logo">
+                                        <img src="assets/hmtl_logo.png">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tech-logo">
+                                        <img src="assets/css_logo.png">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tech-logo">
+                                        <img src="assets/js_logo.png">
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card right-card">
+                <div class="card">
+                    <!-- Housing price -->
+                    <div class="cardfront">
+                        <div class="card-img">
+                            <img src="assets/ezstates.png">
+                        </div>
+                    </div>
+
+                    <div class="cardback">
+                        <div class="app-logo">
+                            <!-- Update -->
+                            <a href="https://github.com/lrongyi/tp" target="_blank"><img src="assets/github_logo.png"></a>
+                        </div>
+                        <h1>Housing Price Prediction</h1>
+                        <p>Analysed a real estate dataset using essential<br> aspects of data science workflow. Built a linear regression model to predict house sale prices</p>
+                        <div class="techstack">
+                            <ul>
+                                <li>
+                                    <div class="tech-logo">
+                                        <img src="assets/pandas_logo.png">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tech-logo">
+                                        <img src="assets/numpy_logo.png">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tech-logo">
+                                        <img src="assets/seaborn_logo.png">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tech-logo">
+                                        <img src="assets/matplotlib_logo.png">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tech-logo">
+                                        <img src="assets/scikit_logo.png">
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+
+        <div class="project-container">
+
+            <div class="project-card left-card">
+                <div class="card">
+                    <!-- EZstates -->
+                    <div class="cardfront">
+                            <div class="card-img">
+                                <img src="assets/ezstates.png">
+                            </div>
+                    </div>
+
+                    <div class="cardback">
+                        <div class="app-logo">
+                            <a href="https://github.com/lrongyi/tp" target="_blank"><img src="assets/ezstates_logo.jpg"></a>
+                        </div>
+                        <h1>EZStates</h1>
+                        <p>A CLI application created to help real estate agents manage properties and clients</p>
+                        <div class="techstack">
+                            <ul>
+                                <li>
+                                    <div class="tech-logo">
+                                        <img src="assets/java_logo.png">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tech-logo">
+                                        <img src="assets/junit_logo.png">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tech-logo">
+                                        <img src="assets/git_logo.png">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tech-logo">
+                                        <img src="assets/github_logo.png">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card right-card">
+                <div class="card">
+                    <!-- savings squad -->
+                    <div class="cardfront">
+                        <div class="card-img">
+                            <img src="assets/savings_squad.png">
+                        </div>
+                    </div>
+                    <div class="cardback">
+                        <div class="app-logo">
+                            <a href="https://github.com/lrongyi/Orbital" target="_blank"><img src="assets/ss_logo.png"></a>
+                        </div>
+                        <h1>Savings Squad</h1>
+                        <p>An Andriod application that assists users in tracking daily expenses and provides insights on spending habits</p>
+                        <div class="techstack">
+                            <ul>
+                                <li>
+                                    <div class="tech-logo">
+                                        <img src="assets/flutter_logo.png">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tech-logo">
+                                        <img src="assets/firebase_logo.png">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tech-logo">
+                                        <img src="assets/dart_logo.png">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tech-logo">
+                                        <img src="assets/git_logo.png">
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tech-logo">
+                                        <img src="assets/github_logo.png">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+
+
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
