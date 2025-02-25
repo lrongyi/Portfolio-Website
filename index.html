@@ -163,6 +163,12 @@
                             <ul>
                                 <li>
                                     <div class="tech-logo">
+                                        <img src="assets/python_logo.png">
+                                        <small>Python</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tech-logo">
                                         <img src="assets/pandas_logo.png">
                                         <small>Pandas</small>
                                     </div>
@@ -228,8 +234,14 @@
                                 </li>
                                 <li>
                                     <div class="tech-logo">
+                                        <img src="assets/codecov.png">
+                                        <small>CodeCov</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tech-logo">
                                         <img src="assets/junit_logo.png">
-                                        <small>JUnit</small>
+                                        <small>JUnit 5</small>
                                     </div>
                                 </li>
                                 <li>
@@ -302,35 +314,71 @@
                 </div>
             </div>
         </div>
+    </div>
 
+    
         <!-- Contact -->
 
-        <div class="contact" id="contact">
-            <h1>Let's Connect</h1>
-            <ul>
-                <li>
-                    <div class="contact-logo">
-                        <a href="https://www.linkedin.com/in/rong-yi-lam" target="_blank"><img src="assets/linkedin_white_logo.png"></a>
-                    </div>
-                </li>
-                <li>
-                    <div class="contact-logo">
-                        <a href="https://github.com/lrongyi" target="_blank"><img src="assets/github_white_logo.png"></a>
-                    </div>       
-                </li>
-                <li>
-                    <!-- email popup -->
-                    <div class="contact-logo">
-                        <a href="#"><img src="assets/email_white_logo.png" target="_blank"></a>
-                    </div>    
-                </li>
-            </ul>
-        </div>
-
+    <div class="contact" id="contact">
+        <h1>Let's Connect</h1>
+        <ul>
+            <li>
+                <div class="contact-logo">
+                    <a href="https://www.linkedin.com/in/rong-yi-lam" target="_blank"><img src="assets/linkedin_white_logo.png"></a>
+                </div>
+            </li>
+            <li>
+                <div class="contact-logo">
+                    <a href="https://github.com/lrongyi" target="_blank"><img src="assets/github_white_logo.png"></a>
+                </div>       
+            </li>
+            <li>
+                <!-- email popup -->
+                <div class="contact-logo">
+                    <button class="open-email"><img src="assets/email_white_logo.png" target="_blank"></button>
+                </div>    
+            </li>
+        </ul>
     </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-head">
+            <div class="title">Drop me an Email</div>
+            <div class="closebutton-container">
+                <button class="close-button">&times;</button>
+            </div>
+            
+        </div>
+        <div class="popup-body">
+            <form id="email-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div id="form-status" class="form-status"></div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <div id="overlay"></div>
 
     <script src="scripts/header.js"></script>
     <script src="scripts/intro.js"></script>
     <script src="scripts/education.js"></script>
+    <script src="scripts/popup.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("Ew2yk2C2kYGKebX4C");
+        })();
+    </script>
 </body>
 </html>
