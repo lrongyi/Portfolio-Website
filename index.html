@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="header">
         <nav>
             <div class ="logo">
-                <a href="index.html">Rong Yi</a>
+                <a href="#intro">Rong Yi</a>
             </div>
 
             <div class="main-menu">
                 <ul class="nav-bar">
-                    <li><a href="#intro">About</a></li>
+                    <!-- <li><a href="#intro">About</a></li> -->
                     <li><a href="#education">Education</a></li>
                     <!-- <li><a href="#">Work</a></li> -->
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>  
 
@@ -37,8 +40,10 @@
             <img src="assets/profile_pic.png" alt="Profile Picture" class="profile-pic">
         </div>
         <div class="intro-statement">
-            <h1><em>Rong Yi</em></h1>
-            <h2>Computer Science student at the National University of Singapore, passionate about SWE, AI, and data science!</h2>
+            <div class="name">
+                <h1><em>Rong Yi</em></h1>
+            </div>
+            <h2>Computer Science student at the National University of Singapore, passionate about Software Engineering, AI, and Data Science!</h2>
         </div>
     </div>
 
@@ -90,7 +95,7 @@
     <div class="projects" id="projects">
         <div class="projects-header">
             <h1>Projects</h1>
-            <p>Find out more about my projects! Click on the application logo for its GitHub repository</p>
+            <p>Find out more about my projects! <br> Click on the application logo for its GitHub repository</p>
         </div>
 
         <div class="project-container">
@@ -116,16 +121,19 @@
                                 <li>
                                     <div class="tech-logo">
                                         <img src="assets/hmtl_logo.png">
+                                        <small>HTML</small>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="tech-logo">
                                         <img src="assets/css_logo.png">
+                                        <small>CSS</small>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="tech-logo">
                                         <img src="assets/js_logo.png">
+                                        <small>JavaScript</small>
                                     </div>
                                 </li>
                                 
@@ -140,7 +148,7 @@
                     <!-- Housing price -->
                     <div class="cardfront">
                         <div class="card-img">
-                            <img src="assets/ezstates.png">
+                            <img src="assets/housing.jpg">
                         </div>
                     </div>
 
@@ -156,26 +164,31 @@
                                 <li>
                                     <div class="tech-logo">
                                         <img src="assets/pandas_logo.png">
+                                        <small>Pandas</small>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="tech-logo">
                                         <img src="assets/numpy_logo.png">
+                                        <small>NumPy</small>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="tech-logo">
                                         <img src="assets/seaborn_logo.png">
+                                        <small>Seaborn</small>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="tech-logo">
                                         <img src="assets/matplotlib_logo.png">
+                                        <small>Matplotlib</small>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="tech-logo">
                                         <img src="assets/scikit_logo.png">
+                                        <small>scikit</small>
                                     </div>
                                 </li>
                                 
@@ -210,21 +223,25 @@
                                 <li>
                                     <div class="tech-logo">
                                         <img src="assets/java_logo.png">
+                                        <small>Java</small>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="tech-logo">
                                         <img src="assets/junit_logo.png">
+                                        <small>JUnit</small>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="tech-logo">
                                         <img src="assets/git_logo.png">
+                                        <small>Git</small>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="tech-logo">
                                         <img src="assets/github_logo.png">
+                                        <small>GitHub</small>
                                     </div>
                                 </li>
                             </ul>
@@ -252,26 +269,31 @@
                                 <li>
                                     <div class="tech-logo">
                                         <img src="assets/flutter_logo.png">
+                                        <small>Flutter</small>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="tech-logo">
                                         <img src="assets/firebase_logo.png">
+                                        <small>Firebase</small>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="tech-logo">
                                         <img src="assets/dart_logo.png">
+                                        <small>Dart</small>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="tech-logo">
                                         <img src="assets/git_logo.png">
+                                        <small>Git</small>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="tech-logo">
                                         <img src="assets/github_logo.png">
+                                        <small>GitHub</small>
                                     </div>
                                 </li>
                             </ul>
@@ -279,13 +301,36 @@
                     </div>
                 </div>
             </div>
-            
-            
         </div>
 
+        <!-- Contact -->
+
+        <div class="contact" id="contact">
+            <h1>Let's Connect</h1>
+            <ul>
+                <li>
+                    <div class="contact-logo">
+                        <a href="https://www.linkedin.com/in/rong-yi-lam" target="_blank"><img src="assets/linkedin_white_logo.png"></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="contact-logo">
+                        <a href="https://github.com/lrongyi" target="_blank"><img src="assets/github_white_logo.png"></a>
+                    </div>       
+                </li>
+                <li>
+                    <!-- email popup -->
+                    <div class="contact-logo">
+                        <a href="#"><img src="assets/email_white_logo.png" target="_blank"></a>
+                    </div>    
+                </li>
+            </ul>
+        </div>
 
     </div>
 
-    <script src="scripts/main.js"></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/intro.js"></script>
+    <script src="scripts/education.js"></script>
 </body>
 </html>
