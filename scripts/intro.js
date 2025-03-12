@@ -16,3 +16,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     observer.observe(intro)
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const navBar = document.querySelector(".nav-bar");
+    const body = document.body;
+    const navLinks = document.querySelectorAll(".nav-bar li a");
+
+    mobileMenu.addEventListener("click", function () {
+        navBar.classList.toggle("clicked");
+        body.classList.toggle("menu-opened");
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            navBar.classList.remove("clicked");
+            body.classList.remove("menu-opened");
+        });
+    });
+});

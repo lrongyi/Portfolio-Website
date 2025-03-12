@@ -88,22 +88,37 @@ nav {
         position: absolute;
         top: 60px;
         right: 0;
-        height: calc(100vh - 60px);
+        height: 100vh;
         width: 100%;
-        background-color: var(--bg-color);
+        font-size: 2.5rem;
+        background: linear-gradient(135deg, #0d0d0d, #0f1b2b);
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        transform: translateX(100%);
+        justify-content: space-evenly;
+        transform: translateY(100%);
         transition: transform 0.3s ease-in-out;
     }
 
-    .nav-links li {
-        margin: 2rem 0;
+    .nav-bar.clicked {
+        transform: translateY(0);
+    }
+
+    body.menu-opened {
+        overflow: hidden;
+    }
+
+    .nav-bar li {
+        margin-left: 0rem;
+    }
+
+    .nav-bar a {
+        font-size: 1.2rem;
     }
 
     .mobile-menu {
         display: flex;
+        flex-direction: column;
+        cursor: pointer;
     }
 
     .nav-bar.active {
@@ -138,7 +153,6 @@ nav {
     opacity: 1;
     transform: translateX(0);
 }
-
 
 /* Profile pic */
 .image-container {
@@ -175,7 +189,15 @@ nav {
 }
 
 /* Mobile */
+@media screen and (max-width: 768px) {
+    .name h1 {
+        font-size: 3.5rem;
+    }
 
+    .intro-statement h2 {
+        font-size: 1rem;
+    }
+}
 
 /* Education */
 
@@ -403,11 +425,11 @@ nav {
 }
 
 /* Card animations */
-.left-card:hover .card {
+.left-card .card.flipped {
     transform: rotateY(-180deg);
 }
 
-.right-card:hover .card {
+.right-card .card.flipped {
     transform: rotateY(180deg);
 }
 
@@ -417,6 +439,7 @@ nav {
     aspect-ratio: 1/1;
     transform-style: preserve-3d;
     transition: transform 1s;
+    will-change: transform;
 }
 
 .cardfront, .cardback{
@@ -436,6 +459,7 @@ nav {
     width: 100%;
     height: 100%;
     transform: rotateY(0deg);
+    cursor: pointer;
 }
 
 .card-img{
@@ -532,6 +556,46 @@ nav {
     width: 50px;
     height: 50px;
     background-color: var(--light-text);
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .projects-header {
+        padding-bottom: 10%;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .right-card .card.flipped {
+        transform: rotateY(-180deg);
+    }
+
+    .project-container {
+        display: inline;
+    }
+
+    .card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .app-logo img {
+        width: 20%;
+        height: auto;
+        margin-bottom: 5%;
+        background-color: var(--light-text);
+    }
+
+    .cardback h1 {
+        font-size: 2rem;
+    }
+    
+    .cardback p {
+        font-size: 1rem;
+    }
 }
 
 /* Contact */
