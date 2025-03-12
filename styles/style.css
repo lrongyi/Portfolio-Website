@@ -21,6 +21,10 @@ body {
     background-attachment: fixed;
 }
 
+body.stop-scroll {
+    overflow: hidden;
+}
+
 /* Header */
 
 header {
@@ -101,10 +105,6 @@ nav {
 
     .nav-bar.clicked {
         transform: translateY(0);
-    }
-
-    body.menu-opened {
-        overflow: hidden;
     }
 
     .nav-bar li {

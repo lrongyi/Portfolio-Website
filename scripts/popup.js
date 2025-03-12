@@ -5,6 +5,7 @@ const closeEmail = document.querySelectorAll(".close-button")
 const overlay = document.getElementById("overlay")
 const popup = document.getElementById("popup")
 const emailForm = document.getElementById("email-form");
+const body = document.body;
 
 console.log("Open buttons:", openEmail);
 console.log("Close buttons:", closeEmail);
@@ -45,6 +46,7 @@ function openPopup(popup) {
     popup.classList.add("active")
     console.log("Popup activated:", popup.classList)
     overlay.classList.add("active")
+    body.classList.add("stop-scroll")
     console.log("Overlay activated:", overlay.classList)
 }
 
@@ -57,6 +59,7 @@ function closePopup(popup) {
     popup.classList.remove("active")
     console.log("Popup deactivated:", popup.classList)
     overlay.classList.remove("active")
+    body.classList.remove("stop-scroll")
     console.log("Overlay deactivated:", overlay.classList)
 }
 

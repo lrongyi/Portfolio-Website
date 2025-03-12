@@ -25,13 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     mobileMenu.addEventListener("click", function () {
         navBar.classList.toggle("clicked");
-        body.classList.toggle("menu-opened");
+        body.classList.toggle("stop-scroll");
     });
 
     navLinks.forEach(link => {
         link.addEventListener("click", function () {
             navBar.classList.remove("clicked");
-            body.classList.remove("menu-opened");
+            body.classList.remove("stop-scroll");
         });
     });
 });
