@@ -12,13 +12,14 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; 
 }
 
 body {
     font-family: 'Outfit', sans-serif;
     background: linear-gradient(135deg, #0d0d0d, #0f1b2b);
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 body.stop-scroll {
@@ -88,6 +89,10 @@ nav {
 }
 
 @media (max-width: 768px) {
+    nav {
+        justify-content: space-between;
+    }
+
     .nav-bar {
         position: absolute;
         top: 60px;
@@ -221,6 +226,15 @@ nav {
     text-align: center;
 }
 
+.education-header {
+    opacity: 0;
+}
+
+.education-visible .education-header {
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
 /* Animations */
 @keyframes moveline {
     0%{
@@ -231,39 +245,28 @@ nav {
     }
 }
 
-@keyframes slideInFromLeft {
-    0%{
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0);
-        opacity: 1;
-    }
+.left-container {
+    left: -2px;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
-@keyframes slideInFromRight {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    } 
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+.right-container {
+    left: 49.85%;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
 }
 
-.left-container .education-visible {
+.education-visible .right-container,
+.education-visible .left-container {
     opacity: 1;
-    animation: slideInFromLeft 1.5s ease-out forwards;
-}
-
-.right-container .education-visible {
-    opacity: 1;
-    animation: slideInFromRight 1.5s ease-out forwards;
+    transform: translateX(0);
 }
 
 /* Education containers */
+
 .timeline{
     position: relative;
     margin: 50px auto;
@@ -272,22 +275,25 @@ nav {
 .timeline::after {
     content:"";
     position: absolute;
-    width: 3px;
+    width: 2px;
     height: 100%;
     background: var(--light-text);
     top: 0;
     left: 50%;
     margin-left: -3px;
     z-index: -1;
-    animation: moveline 1s linear forwards;
+    
+}
+
+.education-visible .timeline::after {
+    animation: moveline 0.5s linear forwards;
 }
 
 .education-container {
     padding: 10px 50px;
-    position: relative;
+    position: relative; 
     width: 50%;
     height: auto;
-    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .education-card {
@@ -326,18 +332,6 @@ nav {
     color: var(--hover-color);
 }
 
-.left-container {
-    left: 0;
-    animation: slideInFromLeft 1s ease-out forwards;
-    opacity: 0;
-}
-
-.right-container {
-    left: 50%;
-    animation: slideInFromRight 1s ease-out forwards;
-    opacity: 0;
-}
-
 /* Education Logos */
 .education-container img {
     position: absolute;
@@ -371,6 +365,10 @@ nav {
 
     .right-container{
         left: 0;
+    }
+
+    .left-container {
+        transform: translateX(100%);
     }
 
     .left-container img, .right-container img {
