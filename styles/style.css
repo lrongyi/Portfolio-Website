@@ -572,6 +572,10 @@ nav {
         padding-bottom: 10%;
     }
 
+    .project-card {
+        padding-bottom: 10%;
+    }
+
     .card{
         width: 100%;
         aspect-ratio: 1/1;
@@ -603,7 +607,7 @@ nav {
     }
 
     .longstack {
-        padding-top: 1%;
+        padding-top: 3%;
     }
 
     .techstack ul {
