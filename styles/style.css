@@ -574,6 +574,7 @@ nav {
 
     .card{
         width: 100%;
+        aspect-ratio: 1/1;
     }
 
     .right-card .card.flipped {
@@ -595,6 +596,18 @@ nav {
         height: auto;
         margin-bottom: 5%;
         background-color: var(--light-text);
+    }
+
+    .techstack {
+        object-fit: contain;
+    }
+
+    .longstack {
+        padding-top: 1%;
+    }
+
+    .techstack ul {
+        gap: 1%;
     }
 
     .cardback h1 {
