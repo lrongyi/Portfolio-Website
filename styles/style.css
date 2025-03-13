@@ -606,7 +606,7 @@ nav {
     }
 
     .longstack {
-        padding-top: 1%;
+        padding-top: 1.5%;
     }
 
     .techstack ul {
@@ -618,7 +618,7 @@ nav {
     }
     
     .cardback p {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
 
