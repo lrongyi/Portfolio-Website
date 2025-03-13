@@ -13,6 +13,8 @@
 
 html {
     scroll-behavior: smooth; 
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -20,6 +22,7 @@ body {
     background: linear-gradient(135deg, #0d0d0d, #0f1b2b);
     background-attachment: fixed;
     overflow-x: hidden;
+    width: 100%;
 }
 
 body.stop-scroll {
@@ -41,8 +44,12 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+}
+
+.logo {
+    padding-left: 5%;
 }
 
 .logo a {
@@ -50,6 +57,10 @@ nav {
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.main-menu {
+    padding-right: 5%;
 }
 
 .nav-bar {
@@ -88,7 +99,7 @@ nav {
     margin: 4px 0;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     nav {
         justify-content: space-between;
     }
@@ -106,10 +117,12 @@ nav {
         justify-content: space-evenly;
         transform: translateY(100%);
         transition: transform 0.3s ease-in-out;
+        visibility: hidden;
     }
 
     .nav-bar.clicked {
         transform: translateY(0);
+        visibility: visible;
     }
 
     .nav-bar li {
@@ -124,10 +137,6 @@ nav {
         display: flex;
         flex-direction: column;
         cursor: pointer;
-    }
-
-    .nav-bar.active {
-        transform: translateX(0);
     }
 }
 
@@ -274,6 +283,7 @@ nav {
 
 .timeline::after {
     content:"";
+    opacity: 0.5;
     position: absolute;
     width: 2px;
     height: 100%;

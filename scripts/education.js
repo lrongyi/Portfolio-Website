@@ -6,9 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("education-visible")
-                } else {
-                    entry.target.classList.remove("education-visible")
-                }
+                } 
             });
         },
         { rootMargin: "-10% 0px -10% 0px", threshold: 0.1 }
