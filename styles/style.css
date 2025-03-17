@@ -203,6 +203,9 @@ nav {
 
 /* Mobile */
 @media screen and (max-width: 768px) {
+    .intro {
+        align-items: center;
+    }
     .name h1 {
         font-size: 3rem;
     }
